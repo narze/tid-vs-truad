@@ -1,6 +1,4 @@
 <script context="module" lang="ts">
-  export const ssr = false;
-
   import type { Load } from "@sveltejs/kit";
 
   // see https://kit.svelte.dev/docs#loading
