@@ -1,14 +1,14 @@
 <script lang="ts">
-	import Header from '$lib/Header/index.svelte';
+	// import Header from '$lib/Header/index.svelte';
 	import '../app.css';
 </script>
 
-<Header />
+<!-- <Header /> -->
 
 <main>
 	<slot />
 </main>
-
+<!--
 <footer>
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
@@ -42,4 +42,4 @@
 			padding: 40px 0;
 		}
 	}
-</style>
+</style> -->
