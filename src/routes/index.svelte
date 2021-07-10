@@ -1,5 +1,4 @@
 <script context="module" lang="ts">
-  import { enhance } from "$lib/form";
   import type { Load } from "@sveltejs/kit";
 
   // see https://kit.svelte.dev/docs#loading
@@ -27,6 +26,8 @@
 </script>
 
 <script lang="ts">
+  import Kofi from "../lib/Kofi.svelte";
+
   export let briefingsData: any[];
   export let reportsData: any[];
 
@@ -52,6 +53,8 @@
 <svelte:head>
   <title>Home</title>
 </svelte:head>
+
+<Kofi name="narze" />
 
 <div class="flex flex-col h-screen sm:flex-row">
   <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
