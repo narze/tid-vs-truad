@@ -11,8 +11,6 @@
 			const briefingsData = await briefingsRes.json();
 			const reportsData = await reportsRes.json();
 
-      console.log({briefingsData, reportsData});
-
 			return {
 				props: { briefingsData,reportsData }
 			};
