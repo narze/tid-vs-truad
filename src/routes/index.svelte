@@ -58,12 +58,12 @@
   <title>ติด vs ตรวจ</title>
 
   <meta name="title" content="ติด vs ตรวจ" />
-  <meta name="description" content="ติด vs ตรวจ" />
+  <meta name="description" content="ยอดผู้ติดโควิดน้อย เพราะตรวจน้อยจริงหรือไม่? มาดูกัน" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta property="og:url" content="https://tid-vs-truad.vercel.app" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ติด vs ตรวจ" />
-  <meta property="og:description" content="ติด vs ตรวจ" />
+  <meta property="og:description" content="ยอดผู้ติดโควิดน้อย เพราะตรวจน้อยจริงหรือไม่? มาดูกัน" />
   <meta
     property="og:image"
     content="https://raw.githubusercontent.com/narze/timelapse/master/projects/tid-vs-truad_home.png"
