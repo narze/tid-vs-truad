@@ -133,6 +133,40 @@
 </div>
 
 <style>
+  @font-face {
+    font-family: "Anakotmai";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../static/fonts/anakotmai-medium.eot"); /* IE9 Compat Modes */
+    src: url("../../static/fonts/anakotmai-medium.eot#iefix") format("embedded-opentype"),
+      url("../../static/fonts/anakotmai-medium.woff2") format("woff2"),
+      url("../../static/fonts/anakotmai-medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Anakotmai";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../../static/fonts/anakotmai-bold.eot"); /* IE9 Compat Modes */
+    src: url("../../static/fonts/anakotmai-bold.eot#iefix") format("embedded-opentype"),
+      url("../../static/fonts/anakotmai-bold.woff2") format("woff2"),
+      url("../../static/fonts/anakotmai-bold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Anakotmai";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../static/fonts/anakotmai-light.eot"); /* IE9 Compat Modes */
+    src: url("../../static/fonts/anakotmai-light.eot#iefix") format("embedded-opentype"),
+      url("../../static/fonts/anakotmai-light.woff2") format("woff2"),
+      url("../../static/fonts/anakotmai-light.woff") format("woff");
+  }
+
+  * {
+    font-family: "Anakotmai";
+  }
+
   section {
     display: flex;
     flex-direction: column;
