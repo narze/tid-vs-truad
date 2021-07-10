@@ -28,18 +28,41 @@
   export let briefingsData: any[];
   export let reportsData: any[];
 
-  export let lastBriefing = briefingsData.slice(-1).pop()
-  export let lastReport = reportsData.slice(-1).pop()
+  const lastBriefing = briefingsData.slice(-1).pop()
+  const lastReport = reportsData.slice(-1).pop()
+
+  // Get data from the same date
+  const lastBriefingDate = lastBriefing["Date"]
+  const lastReportDate = lastReport["Date"]
+
+  let latestDate = lastBriefingDate
+
+  if (lastBriefingDate > lastReportDate) {
+    latestDate = lastReportDate
+  }
+
+  const data = {
+    briefing: briefingsData.slice(-10).find(briefing => briefing["Date"] == latestDate),
+    report: reportsData.slice(-10).find(report => report["Date"] == latestDate),
+  }
 </script>
 
 <svelte:head>
   <title>Home</title>
 </svelte:head>
 
-<section>
-  <h1>ติด : {lastBriefing["Cases"]} (ข้อมูลวันที่ {lastBriefing["Date"]})</h1>
-  <h1>ตรวจ : {lastReport["Tested"] ? lastReport["Tested"] : (lastReport["Tested PUI"] || 0) + (lastReport["Tested Proactive"] || 0) + (lastReport["Tested Quarantine"] || 0) } (ข้อมูลวันที่ {lastReport["Date"]})</h1>
-</section>
+<div class="flex flex-col h-screen sm:flex-row">
+  <div class="w-screen h-1/2 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
+    <h1 class="text-6xl">ติด</h1>
+    <div class="text-8xl">{data.briefing["Cases"]}</div>
+  </div>
+  <div class="w-screen h-1/2 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
+    <h1 class="text-6xl">ตรวจ</h1>
+    <div class="text-8xl">{data.report["Tested"] ? data.report["Tested"] : (data.report["Tested PUI"] || 0) + (data.report["Tested Proactive"] || 0) + (data.report["Tested Quarantine"] || 0) }</div>
+  </div>
+</div>
+<div class="fixed bottom-2 text-center w-screen">ข้อมูลวันที่ {latestDate} (ข้อมูลจาก : <a href="https://djay.github.io/covidthailand" target="_blank" rel="noreferrer">djay.github.io/covidthailand</a>)</div>
+<div class="fixed text-center w-screen h-screen top-1/2 text-2xl">vs</div>
 
 <style>
   section {
