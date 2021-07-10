@@ -21,7 +21,8 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
+  height: -webkit-fill-available;
   margin: 0;
   background-color: var(--primary-color);
   background: linear-gradient(
@@ -36,6 +37,7 @@ body::before {
   content: "";
   width: 80vw;
   height: 100vh;
+  height: -webkit-fill-available;
   position: absolute;
   top: 0;
   left: 10vw;
@@ -49,9 +51,19 @@ body::before {
 }
 
 #svelte {
-  min-height: 100vh;
+  height: 100vh;
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
+  #svelte {
+    height: -webkit-fill-available;
+  }
 }
 
 h1,

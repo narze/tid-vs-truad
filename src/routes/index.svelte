@@ -89,16 +89,32 @@
 
 <Kofi name="narze" />
 
-<div class="flex flex-col h-screen sm:flex-row">
-  <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
-    <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl text-gray-600">ติด</h1>
-    <div class="text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl">
+<div class="flex flex-col h-screen sm:flex-row fixed w-screen">
+  <div
+    class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
+  >
+    <h1
+      class="text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+    >
+      ติด
+    </h1>
+    <div
+      class="text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+    >
       {data.briefing["Cases"]}
     </div>
   </div>
-  <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
-    <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl text-gray-600">ตรวจ</h1>
-    <div class="text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl">
+  <div
+    class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
+  >
+    <h1
+      class="text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+    >
+      ตรวจ
+    </h1>
+    <div
+      class="text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+    >
       {data.report["Tested"]
         ? data.report["Tested"]
         : (data.report["Tested PUI"] || 0) +
@@ -107,13 +123,13 @@
     </div>
   </div>
   <div
-    class="fixed text-center w-screen h-screen top-4/9 sm:top-1/2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-gray-600"
+    class="fixed text-center w-screen h-full top-1/3 pt-10 sm:pt-0 sm:top-1/2 text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2k:text-7xl 4k:text-8xl text-gray-600"
   >
     vs
   </div>
 </div>
-<div class="fixed bottom-2 text-center w-screen z-10">
-  <div class="mb-4">
+<div class="text-xs sm:text-base fixed bottom-16 sm:bottom-2 text-center w-screen z-10">
+  <div class="mb-4 hidden sm:block">
     <Facebook class="h-10 w-10" {url} />
     <Twitter class="h-10 w-10" text={title} {url} />
   </div>
@@ -136,6 +152,10 @@
     |
     <a href="https://watasalim.vercel.app" target="_blank" rel="noreferrer">วาทะสลิ่มสุดเจ๋ง</a>
   </div>
+</div>
+<div class="fixed bottom-4 right-4 z-20 sm:hidden">
+  <Facebook class="h-10 w-10" {url} />
+  <Twitter class="h-10 w-10" text={title} {url} />
 </div>
 
 <style>
