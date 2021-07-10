@@ -120,7 +120,7 @@
   <div class="text-3xl mb-4">ข้อมูลวันที่ {latestDate}</div>
   <div class="text-sm font-light text-gray-600">
     (ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
-    และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด
+    และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด-19
     <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
   </div>
   <div>
