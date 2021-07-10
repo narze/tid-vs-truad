@@ -70,6 +70,17 @@
     name="twitter:image"
     content="https://raw.githubusercontent.com/narze/timelapse/master/projects/tid-vs-truad_home.png"
   />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D48ZMRTDBR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-D48ZMRTDBR");
+  </script>
 </svelte:head>
 
 <Kofi name="narze" />
