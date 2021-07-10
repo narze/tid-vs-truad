@@ -50,17 +50,17 @@
 </svelte:head>
 
 <div class="flex flex-col h-screen sm:flex-row">
-  <div class="w-screen h-1/2 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
+  <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
     <h1 class="text-6xl">ติด</h1>
     <div class="text-8xl">{data.briefing["Cases"]}</div>
   </div>
-  <div class="w-screen h-1/2 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
+  <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
     <h1 class="text-6xl">ตรวจ</h1>
     <div class="text-8xl">{data.report["Tested"] ? data.report["Tested"] : (data.report["Tested PUI"] || 0) + (data.report["Tested Proactive"] || 0) + (data.report["Tested Quarantine"] || 0) }</div>
   </div>
+  <div class="fixed text-center w-screen h-screen top-4/9 sm:top-1/2 text-2xl text-gray-600">vs</div>
 </div>
-<div class="fixed bottom-2 text-center w-screen">ข้อมูลวันที่ {latestDate} (ข้อมูลจาก : <a href="https://djay.github.io/covidthailand" target="_blank" rel="noreferrer">djay.github.io/covidthailand</a>)</div>
-<div class="fixed text-center w-screen h-screen top-1/2 text-2xl">vs</div>
+<div class="fixed bottom-2 text-center w-screen z-10">ข้อมูลวันที่ {latestDate} <br> ข้อมูลจาก : <a href="https://djay.github.io/covidthailand" target="_blank" rel="noreferrer">djay.github.io/covidthailand</a></div>
 
 <style>
   section {
@@ -69,10 +69,6 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-  }
-
-  h1 {
-    width: 100%;
   }
 
   .welcome {
