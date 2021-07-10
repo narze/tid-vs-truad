@@ -55,7 +55,7 @@
 
 <div class="flex flex-col h-screen sm:flex-row">
   <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
-    <h1 class="text-6xl">ติด</h1>
+    <h1 class="text-6xl text-gray-600">ติด</h1>
     <div class="text-8xl">{data.briefing["Cases"]}</div>
   </div>
   <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
@@ -73,10 +73,17 @@
   </div>
 </div>
 <div class="fixed bottom-2 text-center w-screen z-10">
-  <div>ข้อมูลวันที่ {latestDate}</div>
+  <div class="mb-2">ข้อมูลวันที่ {latestDate}</div>
+  <div class="text-xs font-light text-gray-600">
+    (ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
+    และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด
+    <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
+  </div>
   <div class="text-sm">
-    ข้อมูลจาก : <a href="https://djay.github.io/covidthailand" target="_blank" rel="noreferrer"
-      >djay.github.io/covidthailand</a
+    ขอบคุณข้อมูลจาก : <a
+      href="https://djay.github.io/covidthailand"
+      target="_blank"
+      rel="noreferrer">djay.github.io/covidthailand</a
     >
   </div>
   <div class="text-sm">
