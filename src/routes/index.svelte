@@ -29,6 +29,10 @@
 
 <script lang="ts">
   import Kofi from "../lib/Kofi.svelte";
+  import { Facebook, Twitter } from "svelte-share-buttons-component";
+
+  const url = "https://tid-vs-truad.vercel.app";
+  const title = "ติด vs ตรวจ";
 
   export let briefingsData: any[];
   export let reportsData: any[];
@@ -111,6 +115,10 @@
   </div>
 </div>
 <div class="fixed bottom-2 text-center w-screen z-10">
+  <div class="mb-4">
+    <Facebook class="h-10 w-10" {url} />
+    <Twitter class="h-10 w-10" text={title} {url} />
+  </div>
   <div class="text-3xl mb-4">ข้อมูลวันที่ {latestDate}</div>
   <div class="text-sm font-light text-gray-600">
     (ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
