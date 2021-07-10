@@ -125,7 +125,7 @@
   <div>
     <a href="https://github.com/narze/tid-vs-truad" target="_blank" rel="noreferrer">Github</a> |
     <a href="https://thailand-grand-opening.web.app" target="_blank" rel="noreferrer"
-      >Thailand Grand Opening</a
+      >120วันเปิดประเทศ?</a
     >
     |
     <a href="https://watasalim.vercel.app" target="_blank" rel="noreferrer">วาทะสลิ่มสุดเจ๋ง</a>
