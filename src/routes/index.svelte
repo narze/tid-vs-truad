@@ -123,11 +123,9 @@
     และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด-19
     <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
   </div>
-  <div>
-    ขอบคุณข้อมูลจาก : <a
-      href="https://djay.github.io/covidthailand"
-      target="_blank"
-      rel="noreferrer">djay.github.io/covidthailand</a
+  <div class="font-light">
+    ขอบคุณข้อมูลจาก <a href="https://djay.github.io/covidthailand" target="_blank" rel="noreferrer"
+      >djay.github.io/covidthailand</a
     >
   </div>
   <div>
