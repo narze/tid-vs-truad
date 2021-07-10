@@ -51,19 +51,39 @@
 </script>
 
 <svelte:head>
-  <title>Home</title>
+  <title>ติด vs ตรวจ</title>
+
+  <meta name="title" content="ติด vs ตรวจ" />
+  <meta name="description" content="ติด vs ตรวจ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:url" content="https://tid-vs-truad.vercel.app" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ติด vs ตรวจ" />
+  <meta property="og:description" content="ติด vs ตรวจ" />
+  <meta
+    property="og:image"
+    content="https://raw.githubusercontent.com/narze/timelapse/master/projects/tid-vs-truad_home.png"
+  />
+  <meta name="twitter:title" content="ติด vs ตรวจ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:image"
+    content="https://raw.githubusercontent.com/narze/timelapse/master/projects/tid-vs-truad_home.png"
+  />
 </svelte:head>
 
 <Kofi name="narze" />
 
 <div class="flex flex-col h-screen sm:flex-row">
   <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
-    <h1 class="text-6xl text-gray-600">ติด</h1>
-    <div class="text-8xl">{data.briefing["Cases"]}</div>
+    <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl text-gray-600">ติด</h1>
+    <div class="text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl">
+      {data.briefing["Cases"]}
+    </div>
   </div>
   <div class="w-screen h-4/9 sm:h-screen sm:w-1/2 flex justify-center items-center flex-col">
-    <h1 class="text-6xl">ตรวจ</h1>
-    <div class="text-8xl">
+    <h1 class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl text-gray-600">ตรวจ</h1>
+    <div class="text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl">
       {data.report["Tested"]
         ? data.report["Tested"]
         : (data.report["Tested PUI"] || 0) +
@@ -71,25 +91,27 @@
           (data.report["Tested Quarantine"] || 0)}
     </div>
   </div>
-  <div class="fixed text-center w-screen h-screen top-4/9 sm:top-1/2 text-2xl text-gray-600">
+  <div
+    class="fixed text-center w-screen h-screen top-4/9 sm:top-1/2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-gray-600"
+  >
     vs
   </div>
 </div>
 <div class="fixed bottom-2 text-center w-screen z-10">
-  <div class="mb-2">ข้อมูลวันที่ {latestDate}</div>
-  <div class="text-xs font-light text-gray-600">
+  <div class="text-3xl mb-4">ข้อมูลวันที่ {latestDate}</div>
+  <div class="text-sm font-light text-gray-600">
     (ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
     และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด
     <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
   </div>
-  <div class="text-sm">
+  <div>
     ขอบคุณข้อมูลจาก : <a
       href="https://djay.github.io/covidthailand"
       target="_blank"
       rel="noreferrer">djay.github.io/covidthailand</a
     >
   </div>
-  <div class="text-sm">
+  <div>
     <a href="https://github.com/narze/tid-vs-truad" target="_blank" rel="noreferrer">Github</a> |
     <a href="https://thailand-grand-opening.web.app" target="_blank" rel="noreferrer"
       >Thailand Grand Opening</a
