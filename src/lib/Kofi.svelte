@@ -37,6 +37,8 @@
 
 <svelte:head>
   <script
+    async
+    defer
     type="text/javascript"
     src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
     on:load={kofiLoaded}></script>
