@@ -110,7 +110,10 @@
     <h1
       class="text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
     >
-      ตรวจ
+      {" "}ตรวจ<span
+        class="text-gray-400 text-3xl landscape-h-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 2k:text-9xl 4k:text-10xl"
+        >*</span
+      >
     </h1>
     <div
       class="text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
@@ -135,8 +138,8 @@
   </div>
   <div class="text-3xl mb-4">ข้อมูลวันที่ {latestDate}</div>
   <div class="text-sm font-light text-gray-600">
-    (ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
-    และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด-19
+    (* ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
+    และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด-19 และ/หรือ ไม่มีการรายงานข้อมูล
     <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
   </div>
   <div class="font-light">
