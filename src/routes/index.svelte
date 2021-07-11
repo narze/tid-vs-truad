@@ -131,6 +131,13 @@
     vs
   </div>
 </div>
+<div class="text-xs sm:text-base fixed top-2 p-2 text-center w-screen z-10">
+  เชิญชวนร่วมลงชื่อในแคมเปญ Change.org <a
+    href="http://chng.it/xLMgByz6RF"
+    target="_blank"
+    rel="noreferrer">"กรมวิทยาศาสตร์การแพทย์ เปิดเผยจำนวนการตรวจโควิด-19 ต่อวัน ทุกวัน"</a
+  >
+</div>
 <div class="text-xs sm:text-base fixed bottom-16 sm:bottom-2 text-center w-screen z-10">
   <div class="mb-4 hidden sm:block">
     <Facebook class="h-10 w-10" {url} />
