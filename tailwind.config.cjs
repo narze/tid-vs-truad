@@ -14,8 +14,8 @@ const config = {
       },
       screens: {
         "landscape-h-sm": { raw: "(orientation: landscape) and (max-height: 768px)" },
-        "2k": "1600px",
-        "4k": "3200px",
+        "2k": { raw: "(min-width: 2000px) and (min-height: 1200px)" },
+        "4k": { raw: "(min-width: 3200px) and (min-height: 1600px)" },
       },
     },
   },

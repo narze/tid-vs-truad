@@ -94,12 +94,12 @@
     class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
   >
     <h1
-      class="text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+      class="text-3xl xs:text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
     >
       ติด
     </h1>
     <div
-      class="text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+      class="text-4xl xs:text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
     >
       {data.briefing["Cases"]}
     </div>
@@ -108,7 +108,7 @@
     class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
   >
     <h1
-      class="text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+      class="text-3xl xs:text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
     >
       {" "}ตรวจ<span
         class="text-gray-400 text-3xl landscape-h-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 2k:text-9xl 4k:text-10xl"
@@ -116,7 +116,7 @@
       >
     </h1>
     <div
-      class="text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+      class="text-4xl xs:text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
     >
       {data.report["Tested"]
         ? data.report["Tested"]
