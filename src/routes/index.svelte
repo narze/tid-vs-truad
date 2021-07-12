@@ -88,84 +88,94 @@
 </svelte:head>
 
 <Kofi name="narze" />
-
-<div class="flex flex-col h-screen sm:flex-row fixed w-screen">
-  <div
-    class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
-  >
-    <h1
-      class="text-3xl xs:text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+<div id="container" class="h-screen flex flex-col">
+  <div class="text-xs sm:text-base md:fixed top-2 p-2 text-center w-screen z-10">
+    เชิญชวนร่วมลงชื่อในแคมเปญ Change.org <a
+      href="http://chng.it/xLMgByz6RF"
+      target="_blank"
+      rel="noreferrer">"กรมวิทยาศาสตร์การแพทย์ เปิดเผยจำนวนการตรวจโควิด-19 ต่อวัน ทุกวัน"</a
     >
-      ติด
-    </h1>
-    <div
-      class="text-4xl xs:text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
-    >
-      {data.briefing["Cases"]}
-    </div>
   </div>
-  <div
-    class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
-  >
-    <h1
-      class="text-3xl xs:text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+  <div class="flex flex-col flex-2 h-full md:h-screen sm:flex-row md:fixed w-screen">
+    <div
+      class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
     >
-      {" "}ตรวจ<span
-        class="text-gray-400 text-3xl landscape-h-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 2k:text-9xl 4k:text-10xl"
-        >*</span
+      <h1
+        class="text-3xl xs:text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
       >
-    </h1>
+        ติด
+      </h1>
+      <div
+        class="text-4xl xs:text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+      >
+        {data.briefing["Cases"]}
+      </div>
+    </div>
     <div
-      class="text-4xl xs:text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+      class="md:hidden text-center w-screen h-1/5 top-1/3 pt-10 sm:pt-0 sm:top-1/2 text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2k:text-7xl 4k:text-8xl text-gray-600"
     >
-      {data.report["Tested"]
-        ? data.report["Tested"]
-        : (data.report["Tested PUI"] || 0) +
-          (data.report["Tested Proactive"] || 0) +
-          (data.report["Tested Quarantine"] || 0)}
+      vs
+    </div>
+    <div
+      class="w-screen h-2/5 landscape-h-sm:h-4/5 sm:h-full sm:w-1/2 flex justify-center items-center flex-col"
+    >
+      <h1
+        class="text-3xl xs:text-5xl landscape-h-sm:text-6xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl 2k:text-11xl 4k:text-12xl md:leading-normal text-gray-600"
+      >
+        {" "}ตรวจ<span
+          class="text-gray-400 text-3xl landscape-h-sm:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 2k:text-9xl 4k:text-10xl"
+          >*</span
+        >
+      </h1>
+      <div
+        class="text-4xl xs:text-6xl landscape-h-sm:text-7xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-10xl 2xl:text-11xl 2k:text-12xl 4k:text-13xl sm:leading-normal"
+      >
+        {data.report["Tested"]
+          ? data.report["Tested"]
+          : (data.report["Tested PUI"] || 0) +
+            (data.report["Tested Proactive"] || 0) +
+            (data.report["Tested Quarantine"] || 0)}
+      </div>
+    </div>
+    <div
+      class="hidden md:block fixed text-center w-screen h-full top-1/3 pt-10 sm:pt-0 sm:top-1/2 text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2k:text-7xl 4k:text-8xl text-gray-600"
+    >
+      vs
     </div>
   </div>
   <div
-    class="fixed text-center w-screen h-full top-1/3 pt-10 sm:pt-0 sm:top-1/2 text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl 2k:text-7xl 4k:text-8xl text-gray-600"
+    class="text-xs sm:text-base md:fixed bottom-16 sm:bottom-2 text-center w-screen z-10 mb-20 md:mb-0"
   >
-    vs
+    <div class="mb-4 hidden sm:block">
+      <Facebook class="h-10 w-10" {url} />
+      <Twitter class="h-10 w-10" text={title} {url} />
+    </div>
+    <div class="text-3xl mb-4">ข้อมูลวันที่ {latestDate}</div>
+    <div class="text-sm font-light text-gray-600">
+      (* ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
+      และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด-19 และ/หรือ ไม่มีการรายงานข้อมูล
+      <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
+    </div>
+    <div class="font-light">
+      ขอบคุณข้อมูลจาก <a
+        href="https://djay.github.io/covidthailand"
+        target="_blank"
+        rel="noreferrer">djay.github.io/covidthailand</a
+      >
+    </div>
+    <div>
+      <a href="https://github.com/narze/tid-vs-truad" target="_blank" rel="noreferrer">Github</a> |
+      <a href="https://thailand-grand-opening.web.app" target="_blank" rel="noreferrer"
+        >120วันเปิดประเทศ?</a
+      >
+      |
+      <a href="https://watasalim.vercel.app" target="_blank" rel="noreferrer">วาทะสลิ่มสุดเจ๋ง</a>
+    </div>
   </div>
-</div>
-<div class="text-xs sm:text-base fixed top-2 p-2 text-center w-screen z-10">
-  เชิญชวนร่วมลงชื่อในแคมเปญ Change.org <a
-    href="http://chng.it/xLMgByz6RF"
-    target="_blank"
-    rel="noreferrer">"กรมวิทยาศาสตร์การแพทย์ เปิดเผยจำนวนการตรวจโควิด-19 ต่อวัน ทุกวัน"</a
-  >
-</div>
-<div class="text-xs sm:text-base fixed bottom-16 sm:bottom-2 text-center w-screen z-10">
-  <div class="mb-4 hidden sm:block">
+  <div class="fixed bottom-4 right-4 z-20 sm:hidden">
     <Facebook class="h-10 w-10" {url} />
     <Twitter class="h-10 w-10" text={title} {url} />
   </div>
-  <div class="text-3xl mb-4">ข้อมูลวันที่ {latestDate}</div>
-  <div class="text-sm font-light text-gray-600">
-    (* ตัวเลขการตรวจอาจน้อยกว่าความเป็นจริง เนื่องจากข้อมูลจากทางการมาจากหลายแหล่งข้อมูล <br />
-    และ/หรือ รายงานผลช้ากว่าจำนวนผู้ติดเชื้อโควิด-19 และ/หรือ ไม่มีการรายงานข้อมูล
-    <a href="https://github.com/djay/covidthailand#positive-rate">อ่านเพิ่มเติม</a>)
-  </div>
-  <div class="font-light">
-    ขอบคุณข้อมูลจาก <a href="https://djay.github.io/covidthailand" target="_blank" rel="noreferrer"
-      >djay.github.io/covidthailand</a
-    >
-  </div>
-  <div>
-    <a href="https://github.com/narze/tid-vs-truad" target="_blank" rel="noreferrer">Github</a> |
-    <a href="https://thailand-grand-opening.web.app" target="_blank" rel="noreferrer"
-      >120วันเปิดประเทศ?</a
-    >
-    |
-    <a href="https://watasalim.vercel.app" target="_blank" rel="noreferrer">วาทะสลิ่มสุดเจ๋ง</a>
-  </div>
-</div>
-<div class="fixed bottom-4 right-4 z-20 sm:hidden">
-  <Facebook class="h-10 w-10" {url} />
-  <Twitter class="h-10 w-10" text={title} {url} />
 </div>
 
 <style>
@@ -201,5 +211,15 @@
 
   * {
     font-family: "Anakotmai";
+  }
+
+  #container {
+    background-color: var(--primary-color);
+    background: linear-gradient(
+      180deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 10.45%,
+      var(--tertiary-color) 41.35%
+    );
   }
 </style>
